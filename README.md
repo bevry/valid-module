@@ -35,7 +35,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ## Usage
 
-[Complete API Documentation.](https://master.valid-module.bevry.surge.sh/docs/)
+[Complete API Documentation.](http://master.valid-module.bevry.surge.sh/docs/)
 
 <!-- INSTALL/ -->
 

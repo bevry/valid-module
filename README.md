@@ -35,7 +35,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ## Usage
 
-[Complete API Documentation.](http://master.valid-module.bevry.surge.sh/docs/)
+[Complete API Documentation.](http://master.valid-module.bevry.surge.sh/docs/globals.html)
 
 <!-- INSTALL/ -->
 
@@ -59,7 +59,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.pika.dev/valid-module/^1.0.0'
+    import * as pkg from '//cdn.pika.dev/valid-module/^1.1.0'
 </script>
 ```
 
@@ -67,7 +67,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/valid-module@^1.0.0/edition-browsers/browser.js'
+    import * as pkg from '//unpkg.com/valid-module@^1.1.0'
 </script>
 ```
 
@@ -75,20 +75,18 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/valid-module@1.0.0'
+    import * as pkg from '//dev.jspm.io/valid-module@1.1.0'
 </script>
 ```
 
 <h3><a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
 
-<p>This package is published with the following <a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a>:</p>
+<p>This package is published with the following editions:</p>
 
 <ul><li><code>valid-module/source/index.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>valid-module/edition-browsers/browser.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a> for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>valid-module</code> aliases <code>valid-module/edition-<a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a>/index.js</code></li>
-<li><code>valid-module/edition-<a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a>/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a> for Node.js with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
-
-<p>Environments older than Node.js v10 may need <a href="https://babeljs.io/docs/usage/polyfill/" title="A polyfill that emulates missing ECMAScript environment features">Babel's Polyfill</a> or something similar.</p>
+<li><code>valid-module</code> aliases <code>valid-module/edition-esnext/index.js</code></li>
+<li><code>valid-module/edition-esnext/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
+<li><code>valid-module/edition-browsers/browser.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li></ul>
 
 <!-- /INSTALL -->
 
@@ -119,7 +117,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 These amazing people are maintaining this project:
 
-<ul><li>Benjamin Lupton</li></ul>
+<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/valid-module/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/valid-module">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -139,7 +137,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/valid-module/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/valid-module">view contributions</a></li></ul>
+<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/valid-module/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/valid-module">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/valid-module/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
@@ -152,7 +150,7 @@ These amazing people have contributed code to this project:
 
 Unless stated otherwise all works are:
 
-<ul><li>Copyright &copy; 2019+ Benjamin Lupton</li></ul>
+<ul><li>Copyright &copy; 2019+ <a href="https://balupton.com">Benjamin Lupton</a></li></ul>
 
 and licensed under:
 

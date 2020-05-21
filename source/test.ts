@@ -11,26 +11,26 @@ function fail(result: Promise<true>, done: kava.Errback) {
 		.catch(() => done())
 }
 
-kava.suite('valid-module', function(suite, test) {
-	test('valid package.json', function(done) {
+kava.suite('valid-module', function (suite, test) {
+	test('valid package.json', function (done) {
 		pass(json({ module: 'something' }), done)
 	})
-	test('invalid package.json', function(done) {
+	test('invalid package.json', function (done) {
 		fail(json({}), done)
 	})
-	test('valid file', function(done) {
+	test('valid file', function (done) {
 		pass(file('export default 5'), done)
 	})
-	test('invalid file', function(done) {
+	test('invalid file', function (done) {
 		fail(file('module.exports = 5'), done)
 	})
-	test('remote success', function(done) {
+	test('remote success', function (done) {
 		pass(registry('daet', '1.1.0'), done)
 	})
-	test('remote failure', function(done) {
+	test('remote failure', function (done) {
 		fail(registry('daet', '1.11.0'), done)
 	})
-	test('local success', function(done) {
+	test('local success', function (done) {
 		pass(local(), done)
 	})
 })

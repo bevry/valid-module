@@ -1,6 +1,6 @@
 import { equal } from 'assert-helpers'
 import kava from 'kava'
-import { local, registry, json, file } from './index.js'
+import { local, registry, json, file } from './node.js'
 
 function pass(result: Promise<true>, done: kava.Errback) {
 	result.then(() => done()).catch(done)

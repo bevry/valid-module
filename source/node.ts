@@ -1,7 +1,8 @@
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
 import { cwd } from 'process'
-import { json, file } from './universal.js'
+import { json, file } from './index.js'
+export * from './index.js'
 
 /**
  * Verify that the package directory declares a valid ECMAScript module file

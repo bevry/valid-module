@@ -1,5 +1,5 @@
 import { cwd } from 'process'
-import { local } from './index.js'
+import { local } from './node.js'
 const path = cwd()
 local(path)
 	.then(function () {

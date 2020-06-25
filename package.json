@@ -1,6 +1,6 @@
 {
   "name": "valid-module",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Verify that file or package, be it remote, or local, is a valid ECMAScript Module",
   "homepage": "https://github.com/bevry/valid-module",
   "license": "MIT",
@@ -118,25 +118,25 @@
   "browser": "edition-browsers/node.js",
   "module": "edition-browsers/node.js",
   "dependencies": {
-    "cross-fetch": "^3.0.4"
+    "cross-fetch": "^3.0.5"
   },
   "devDependencies": {
-    "@bevry/update-contributors": "1.9.0",
-    "@typescript-eslint/eslint-plugin": "^3.3.0",
-    "@typescript-eslint/parser": "^3.3.0",
-    "assert-helpers": "^6.8.0",
-    "eslint": "^7.3.0",
-    "eslint-config-bevry": "^3.8.0",
-    "eslint-config-prettier": "^6.7.0",
+    "@bevry/update-contributors": "^1.13.0",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "assert-helpers": "^6.13.0",
+    "eslint": "^7.3.1",
+    "eslint-config-bevry": "^3.13.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "kava": "^5.7.0",
-    "make-deno-edition": "^0.9.1",
+    "kava": "^5.8.0",
+    "make-deno-edition": "^0.14.0",
     "prettier": "^2.0.5",
-    "projectz": "^2.9.0",
+    "projectz": "^2.11.0",
     "surge": "^0.21.3",
     "typedoc": "^0.17.7",
     "typescript": "^3.9.5",
-    "valid-directory": "2.2.0"
+    "valid-directory": "^2.5.0"
   },
   "scripts": {
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",

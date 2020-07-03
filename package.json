@@ -5,7 +5,13 @@
   "homepage": "https://github.com/bevry/valid-module",
   "license": "MIT",
   "keywords": [
+    "allow-env",
+    "allow-read",
     "browser",
+    "deno",
+    "deno-edition",
+    "deno-entry",
+    "denoland",
     "ecmascript",
     "esm",
     "mjs",
@@ -122,6 +128,20 @@
         "node": true,
         "browsers": false
       }
+    },
+    {
+      "description": "TypeScript source code made to be compatible with Deno",
+      "directory": "edition-deno",
+      "entry": "node.ts",
+      "tags": [
+        "typescript",
+        "import",
+        "deno"
+      ],
+      "engines": {
+        "deno": true,
+        "browsers": true
+      }
     }
   ],
   "bin": "bin.cjs",
@@ -198,5 +218,6 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
-  }
+  },
+  "deno": "edition-deno/node.ts"
 }

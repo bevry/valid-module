@@ -1,4 +1,4 @@
-import { cwd } from 'process'
+import { cwd, exit } from 'process'
 import { local } from './node.js'
 const path = cwd()
 local(path)
@@ -8,7 +8,5 @@ local(path)
 	.catch(function (err) {
 		console.error(`${path} failed to validate`)
 		console.error(err)
-		if (!process.exitCode) {
-			process.exitCode = 1
-		}
+		exit(1)
 	})

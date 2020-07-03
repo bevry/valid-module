@@ -1,6 +1,7 @@
 import { promises as fsPromises } from 'fs'
 import { join } from 'path'
 import { cwd } from 'process'
+import Errlop from 'errlop'
 import { json, file } from './index.js'
 export * from './index.js'
 
@@ -12,6 +13,7 @@ export * from './index.js'
 export async function local(
 	packageRootDirectory: string = cwd()
 ): Promise<true> {
+	let path = packageRootDirectory
 	try {
 		const data = JSON.parse(
 			await fsPromises.readFile(
@@ -20,12 +22,10 @@ export async function local(
 			)
 		)
 		await json(data)
-		const content = await fsPromises.readFile(
-			join(packageRootDirectory, data.module),
-			'utf8'
-		)
+		path = join(packageRootDirectory, data.module)
+		const content = await fsPromises.readFile(path, 'utf8')
 		return await file(content)
 	} catch (err) {
-		return Promise.reject(err)
+		return Promise.reject(new Errlop(`${path} is not a valid module`, err))
 	}
 }

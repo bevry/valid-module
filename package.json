@@ -1,6 +1,6 @@
 {
   "name": "valid-module",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "description": "Verify that file or package, be it remote, or local, is a valid ECMAScript Module",
   "homepage": "https://github.com/bevry/valid-module",
   "license": "MIT",
@@ -157,10 +157,12 @@
       "import": "./edition-browsers/node.js"
     }
   },
+  "deno": "edition-deno/node.ts",
   "browser": "edition-browsers/node.js",
   "module": "edition-browsers/node.js",
   "dependencies": {
-    "cross-fetch": "^3.0.5"
+    "cross-fetch": "^3.0.5",
+    "errlop": "^3.10.0"
   },
   "devDependencies": {
     "@bevry/update-contributors": "^1.13.0",
@@ -218,6 +220,5 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
-  },
-  "deno": "edition-deno/node.ts"
+  }
 }

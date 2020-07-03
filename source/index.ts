@@ -1,4 +1,5 @@
 import fetch from 'cross-fetch'
+import Errlop from 'errlop'
 
 /** Trim the trailing slash off the path */
 function trim(path: string) {
@@ -29,11 +30,11 @@ export function file(content: string): Promise<true> {
 	// this avoids comments and strings, except for template literals, but that is rare
 	content = '\n' + content.replace(/^[ \t]+/, '') + '\n'
 	if (content.includes('\nmodule.exports ='))
-		return Promise.reject(new Error('module file uses module.exports'))
+		return Promise.reject(new Error('module file uses [module.exports = ]'))
 	if (content.includes('\nexports = '))
-		return Promise.reject(new Error('module file uses exports'))
+		return Promise.reject(new Error('module file uses [exports =]'))
 	if (content.includes('\nexports.'))
-		return Promise.reject(new Error('module file uses exports'))
+		return Promise.reject(new Error('module file uses [exports.* =]'))
 	if (content.includes('\nrequire('))
 		return Promise.reject(
 			new Error('module file used the CommonJS require method')
@@ -49,17 +50,18 @@ export function file(content: string): Promise<true> {
  * @rejects if otherwise
  */
 export async function remote(packageRootURL: string): Promise<true> {
+	let path = packageRootURL
 	try {
 		const pkgURL = trim(packageRootURL) + '/package.json'
 		const pkgResponse = await fetch(pkgURL)
 		const data = await pkgResponse.json()
 		await json(data)
-		const fileURL = trim(packageRootURL) + '/' + data.module
-		const fileResponse = await fetch(fileURL)
+		path = trim(packageRootURL) + '/' + data.module
+		const fileResponse = await fetch(path)
 		const content = await fileResponse.text()
 		return await file(content)
 	} catch (err) {
-		return Promise.reject(err)
+		return Promise.reject(new Errlop(`${path} is not a valid module`, err))
 	}
 }
 

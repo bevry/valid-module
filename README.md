@@ -59,7 +59,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.pika.dev/valid-module/^1.11.0'
+    import * as pkg from '//cdn.pika.dev/valid-module/^1.12.0'
 </script>
 ```
 
@@ -67,7 +67,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/valid-module@^1.11.0'
+    import * as pkg from '//unpkg.com/valid-module@^1.12.0'
 </script>
 ```
 
@@ -75,7 +75,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/valid-module@1.11.0'
+    import * as pkg from '//dev.jspm.io/valid-module@1.12.0'
 </script>
 ```
 

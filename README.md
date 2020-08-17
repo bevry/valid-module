@@ -55,11 +55,11 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 <li>Require: <code>const pkg = require('valid-module')</code></li>
 </ul>
 
-<a href="https://www.pika.dev/cdn" title="100% Native ES Modules CDN"><h3>pika</h3></a>
+<a href="https://www.skypack.dev" title="Skypack is a JavaScript Delivery Network for modern web apps"><h3>Skypack</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.pika.dev/valid-module/^1.12.0'
+    import * as pkg from '//cdn.skypack.dev/valid-module@^1.13.0'
 </script>
 ```
 
@@ -67,7 +67,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/valid-module@^1.12.0'
+    import * as pkg from '//unpkg.com/valid-module@^1.13.0'
 </script>
 ```
 
@@ -75,7 +75,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/valid-module@1.12.0'
+    import * as pkg from '//dev.jspm.io/valid-module@1.13.0'
 </script>
 ```
 

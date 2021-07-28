@@ -7,7 +7,7 @@
 
 <!-- BADGES/ -->
 
-<span class="badge-travisci"><a href="http://travis-ci.com/bevry/valid-module" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/com/bevry/valid-module/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-githubworkflow"><a href="https://github.com/bevry/valid-module/actions?query=workflow%3Abevry" title="View the status of this project's GitHub Workflow: bevry"><img src="https://github.com/bevry/valid-module/workflows/bevry/badge.svg" alt="Status of the GitHub Workflow: bevry" /></a></span>
 <span class="badge-npmversion"><a href="https://npmjs.org/package/valid-module" title="View this project on NPM"><img src="https://img.shields.io/npm/v/valid-module.svg" alt="NPM version" /></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/valid-module" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/valid-module.svg" alt="NPM downloads" /></a></span>
 <span class="badge-daviddm"><a href="https://david-dm.org/bevry/valid-module" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/bevry/valid-module.svg" alt="Dependency Status" /></a></span>
@@ -55,17 +55,11 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 <li>Require: <code>const pkg = require('valid-module')</code></li>
 </ul>
 
-<a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative for Node.js"><h3>Deno</h3></a>
-
-``` typescript
-import * as pkg from 'https://unpkg.com/valid-module@^1.15.0/edition-deno/node.ts'
-```
-
 <a href="https://www.skypack.dev" title="Skypack is a JavaScript Delivery Network for modern web apps"><h3>Skypack</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.skypack.dev/valid-module@^1.15.0'
+    import * as pkg from '//cdn.skypack.dev/valid-module@^1.16.0'
 </script>
 ```
 
@@ -73,7 +67,7 @@ import * as pkg from 'https://unpkg.com/valid-module@^1.15.0/edition-deno/node.t
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/valid-module@^1.15.0'
+    import * as pkg from '//unpkg.com/valid-module@^1.16.0'
 </script>
 ```
 
@@ -81,7 +75,7 @@ import * as pkg from 'https://unpkg.com/valid-module@^1.15.0/edition-deno/node.t
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/valid-module@1.15.0'
+    import * as pkg from '//dev.jspm.io/valid-module@1.16.0'
 </script>
 ```
 
@@ -90,11 +84,10 @@ import * as pkg from 'https://unpkg.com/valid-module@^1.15.0/edition-deno/node.t
 <p>This package is published with the following editions:</p>
 
 <ul><li><code>valid-module/source/node.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>valid-module/edition-browsers/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>valid-module</code> aliases <code>valid-module/edition-esnext/node.js</code></li>
-<li><code>valid-module/edition-esnext/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 10 || 12 || 14 || 15 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
-<li><code>valid-module/edition-esnext-esm/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 12 || 14 || 15 with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>valid-module/edition-deno/node.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code made to be compatible with <a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative to Node.js">Deno</a></li></ul>
+<li><code>valid-module/edition-browsers/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#11th_Edition_–_ECMAScript_2020" title="ECMAScript ES2020">ES2020</a> for web browsers with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
+<li><code>valid-module</code> aliases <code>valid-module/edition-es2019/node.js</code></li>
+<li><code>valid-module/edition-es2019/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 10 || 12 || 14 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
+<li><code>valid-module/edition-es2019-esm/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#10th_Edition_-_ECMAScript_2019" title="ECMAScript ES2019">ES2019</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 12 || 14 with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li></ul>
 
 <!-- /INSTALL -->
 

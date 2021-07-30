@@ -1,6 +1,6 @@
 {
   "name": "valid-module",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "Verify that file or package, be it remote, or local, is a valid ECMAScript Module",
   "homepage": "https://github.com/bevry/valid-module",
   "license": "MIT",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "description": "TypeScript compiled against ES2019 for Node.js 10 || 12 || 14 with Require for modules",
+      "description": "TypeScript compiled against ES2019 for Node.js 10 || 12 || 14 || 16 with Require for modules",
       "directory": "edition-es2019",
       "entry": "node.js",
       "tags": [
@@ -112,12 +112,12 @@
         "require"
       ],
       "engines": {
-        "node": "10 || 12 || 14",
+        "node": "10 || 12 || 14 || 16",
         "browsers": false
       }
     },
     {
-      "description": "TypeScript compiled against ES2019 for Node.js 12 || 14 with Import for modules",
+      "description": "TypeScript compiled against ES2019 for Node.js 12 || 14 || 16 with Import for modules",
       "directory": "edition-es2019-esm",
       "entry": "node.js",
       "tags": [
@@ -127,7 +127,7 @@
         "import"
       ],
       "engines": {
-        "node": "12 || 14",
+        "node": "12 || 14 || 16",
         "browsers": false
       }
     }
@@ -149,27 +149,28 @@
   "module": "edition-browsers/node.js",
   "dependencies": {
     "cross-fetch": "^3.1.4",
-    "errlop": "^4.2.0"
+    "errlop": "^4.5.0"
   },
   "devDependencies": {
-    "@bevry/update-contributors": "^1.18.0",
+    "@bevry/update-contributors": "^1.19.0",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
-    "assert-helpers": "^8.2.0",
+    "assert-helpers": "^8.4.0",
     "eslint": "^7.31.0",
-    "eslint-config-bevry": "^3.23.0",
+    "eslint-config-bevry": "^3.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "kava": "^5.14.0",
+    "kava": "^5.15.0",
     "make-deno-edition": "^1.3.0",
     "prettier": "^2.3.2",
-    "projectz": "^2.18.0",
+    "projectz": "^2.22.0",
     "surge": "^0.23.0",
     "typedoc": "^0.21.4",
     "typescript": "4.3.5",
     "valid-directory": "^3.7.0"
   },
   "scripts": {
+    "our:bin": "node ./bin.cjs",
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
     "our:compile": "npm run our:compile:deno && npm run our:compile:edition-browsers && npm run our:compile:edition-es2019 && npm run our:compile:edition-es2019-esm && npm run our:compile:types",
     "our:compile:deno": "make-deno-edition --attempt",
@@ -195,7 +196,7 @@
     "our:verify": "npm run our:verify:directory && npm run our:verify:eslint && npm run our:verify:module && npm run our:verify:prettier",
     "our:verify:directory": "valid-directory",
     "our:verify:eslint": "eslint --fix --ignore-pattern '**/*.d.ts' --ignore-pattern '**/vendor/' --ignore-pattern '**/node_modules/' --ext .mjs,.js,.jsx,.ts,.tsx ./source",
-    "our:verify:module": "npx .",
+    "our:verify:module": "npm run our:bin",
     "our:verify:prettier": "prettier --write .",
     "test": "node ./edition-es2019/test.js"
   },

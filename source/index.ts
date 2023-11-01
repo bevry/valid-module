@@ -1,4 +1,3 @@
-import fetch from 'cross-fetch'
 import Errlop from 'errlop'
 
 /** Trim the trailing slash off the path */
@@ -37,7 +36,7 @@ export function file(content: string): Promise<true> {
 		return Promise.reject(new Error('module file uses [exports.* =]'))
 	if (content.includes('\nrequire('))
 		return Promise.reject(
-			new Error('module file used the CommonJS require method')
+			new Error('module file used the CommonJS require method'),
 		)
 	if (!content.includes('\nexport '))
 		return Promise.reject(new Error('module file did not make use of export'))
@@ -60,7 +59,7 @@ export async function remote(packageRootURL: string): Promise<true> {
 		const fileResponse = await fetch(path)
 		const content = await fileResponse.text()
 		return await file(content)
-	} catch (err) {
+	} catch (err: any) {
 		return Promise.reject(new Errlop(`${path} is not a valid module`, err))
 	}
 }
@@ -74,7 +73,7 @@ export async function remote(packageRootURL: string): Promise<true> {
  */
 export function registry(
 	packageName: string,
-	packageVersion: string | number
+	packageVersion: string | number,
 ): Promise<true> {
 	const url =
 		`https://unpkg.com/${packageName}` +

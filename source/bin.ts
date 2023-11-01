@@ -5,7 +5,7 @@ local(path)
 	.then(function () {
 		console.log(`${path} is valid`)
 	})
-	.catch(function (err) {
+	.catch(function (err: any) {
 		console.error(`${path} failed to validate`)
 		console.error(err)
 		exit(1)

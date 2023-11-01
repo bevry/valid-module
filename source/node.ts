@@ -11,21 +11,21 @@ export * from './index.js'
  * @rejects if otherwise
  */
 export async function local(
-	packageRootDirectory: string = cwd()
+	packageRootDirectory: string = cwd(),
 ): Promise<true> {
 	let path = packageRootDirectory
 	try {
 		const data = JSON.parse(
 			await fsPromises.readFile(
 				join(packageRootDirectory, 'package.json'),
-				'utf8'
-			)
+				'utf8',
+			),
 		)
 		await json(data)
 		path = join(packageRootDirectory, data.module)
 		const content = await fsPromises.readFile(path, 'utf8')
 		return await file(content)
-	} catch (err) {
+	} catch (err: any) {
 		return Promise.reject(new Errlop(`${path} is not a valid module`, err))
 	}
 }

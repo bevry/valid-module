@@ -148,7 +148,7 @@
   "browser": "edition-browsers/node.js",
   "module": "edition-browsers/node.js",
   "dependencies": {
-    "errlop": "^4.6.0"
+    "errlop": "^7.0.0"
   },
   "devDependencies": {
     "@bevry/update-contributors": "^1.23.0",

@@ -11,15 +11,15 @@ export * from './index.js'
  * @rejects if otherwise
  */
 export async function local(
-	packageRootDirectory: string = cwd(),
+	packageRootDirectory: string = cwd()
 ): Promise<true> {
 	let path = packageRootDirectory
 	try {
 		const data = JSON.parse(
 			await fsPromises.readFile(
 				join(packageRootDirectory, 'package.json'),
-				'utf8',
-			),
+				'utf8'
+			)
 		)
 		await json(data)
 		path = join(packageRootDirectory, data.module)

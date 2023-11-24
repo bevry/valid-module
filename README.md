@@ -55,11 +55,17 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 <li>Require: <code>const pkg = require('valid-module')</code></li>
 </ul>
 
+<a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative for Node.js"><h3>Deno</h3></a>
+
+``` typescript
+import * as pkg from 'https://unpkg.com/valid-module@^2.6.0/edition-deno/node.ts'
+```
+
 <a href="https://www.skypack.dev" title="Skypack is a JavaScript Delivery Network for modern web apps"><h3>Skypack</h3></a>
 
 ``` html
 <script type="module">
-    import * as pkg from '//cdn.skypack.dev/valid-module@^2.5.0'
+    import * as pkg from '//cdn.skypack.dev/valid-module@^2.6.0'
 </script>
 ```
 
@@ -67,7 +73,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//unpkg.com/valid-module@^2.5.0'
+    import * as pkg from '//unpkg.com/valid-module@^2.6.0'
 </script>
 ```
 
@@ -75,7 +81,7 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/valid-module@2.5.0'
+    import * as pkg from '//dev.jspm.io/valid-module@2.6.0'
 </script>
 ```
 
@@ -88,7 +94,8 @@ Verify that file or package, be it remote, or local, is a valid ECMAScript Modul
 <li><code>valid-module</code> aliases <code>valid-module/edition-es2022/node.js</code></li>
 <li><code>valid-module/edition-es2022/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against ES2022 for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 18 || 20 || 21 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li>
 <li><code>valid-module/edition-es2022-esm/node.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against ES2022 for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 18 || 20 || 21 with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
-<li><code>valid-module/edition-types/node.d.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled Types with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li></ul>
+<li><code>valid-module/edition-types/node.d.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled Types with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
+<li><code>valid-module/edition-deno/node.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code made to be compatible with <a href="https://deno.land" title="Deno is a secure runtime for JavaScript and TypeScript, it is an alternative to Node.js">Deno</a></li></ul>
 
 <!-- /INSTALL -->
 
